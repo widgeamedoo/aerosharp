@@ -6,3 +6,4 @@ Modify this file: /etc/udev/rules.d/50-usbserial.rules
 and add:
 SUBSYSTEMS=="usb", ATTRS{manufacturer}=="Prolific Technology Inc.", ATTRS{product}=="USB-Serial Controller", KERNELS=="1-1.2" SYMLINK+="aerosharp", ACTION=="add", MODE="0666"
 
+Get a good quality serial to usb device because this one spews out a big string of garbage from time to time locking up the software, hence the check and restart script in cron
